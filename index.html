@@ -1,0 +1,144 @@
+<!doctype html>
+<!-- UNOFFICIAL PREVIEW. Not a City of Temecula website. A mock-up of temeculaca.gov/327/Aquatics
+     with both city pools on one live Pool Relay schedule. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Temecula Aquatics</title>
+<meta name="description" content="Both City of Temecula pools on one live schedule: what's in the water now, at which pool, on how many lanes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+
+<div class="preview-note"><b>Unofficial preview.</b> Not a City of Temecula page &mdash; a mock-up of
+  <a href="https://temeculaca.gov/327/Aquatics" target="_blank" rel="noopener noreferrer">Temecula Aquatics</a>
+  with both city pools on one live schedule.</div>
+
+<header class="site">
+  <div class="hdr">
+    <img src="https://temeculaca.gov/ImageRepository/Document?documentID=17257" alt="Temecula Community Services">
+    <nav aria-label="Main"><span>CLASSES, PROGRAMS &amp; EVENTS</span><span>AQUATICS &amp; SPORTS</span><span>FACILITIES &amp; PARKS</span><span>I WANT TO&hellip;</span></nav>
+    <div class="search" aria-hidden="true"><span>Search Temecula&hellip;</span><b>&#9906;</b></div>
+  </div>
+</header>
+
+<div class="wrap"><div class="cols">
+  <aside class="menu" aria-label="Aquatics">
+    <a class="here" href="#find">Find a swim</a>
+    <a href="#pools">The two pools</a>
+    <a class="sub" href="#pool-mrc">Margarita Rec Center</a>
+    <a class="sub" href="#pool-crc">Community Rec Center</a>
+    <a href="#programs">Programs</a>
+    <a class="sub" href="https://temeculaca.gov/361" target="_blank" rel="noopener">Lap Swim / Gentle Swim</a>
+    <a class="sub" href="https://temeculaca.gov/363" target="_blank" rel="noopener">Masters Swimming</a>
+    <a class="sub" href="https://temeculaca.gov/328" target="_blank" rel="noopener">Water Exercise Classes</a>
+    <a class="sub" href="https://temeculaca.gov/376" target="_blank" rel="noopener">Public Swim</a>
+    <a class="sub" href="https://temeculaca.gov/336/Swim-Lessons" target="_blank" rel="noopener">Swim Lessons</a>
+    <a class="sub" href="https://temeculaca.gov/1592/LifeguardWSI" target="_blank" rel="noopener">Lifeguard / WSI</a>
+    <a href="https://secure.rec1.com/CA/temecula-ca/catalog" target="_blank" rel="noopener">Register for classes</a>
+  </aside>
+
+  <main class="sheet">
+    <div class="crumbs">Home &rsaquo; Community &rsaquo; Community Services &rsaquo; Aquatics &amp; Sports &rsaquo; Aquatics</div>
+    <h1>Aquatics</h1>
+    <p class="lede">Two city pools, one schedule. See what's in the water right now, at which pool, on how
+      many lanes and until when &mdash; lap and gentle swim, water fitness, lessons and Masters.</p>
+
+    <div class="alert" id="crc-status"><b>Community Rec Center pool: temporarily closed.</b>
+      Lap Swim and Gentle Swim are at the Margarita Rec Center pool for now. No reopening date has been
+      announced; the city's notice was last updated October&nbsp;15.</div>
+
+    <div id="find"></div>
+    <div id="finder" class="finder" data-view="a5XvJXBg4eRfslsM6LjqTS" data-center="[33.51,-117.14]" data-zoom="12"></div>
+    <p class="cal-foot">Live from the city's posted schedule and class catalog. Lane assignments are our estimate
+      where the city doesn't publish them.</p>
+
+    <h2 id="pools">The two pools</h2>
+    <div class="tabs" role="group" aria-label="Pool">
+      <button type="button" data-pool="mrc" aria-pressed="true">Margarita Rec Center</button>
+      <button type="button" data-pool="crc" aria-pressed="false">Community Rec Center</button>
+    </div>
+    <section id="pool-mrc" data-panel="mrc">
+      <p style="margin:0 0 10px"><b>Margarita Rec Center</b> &middot; 29119 Margarita Rd. &middot; 25 yards, 6 lanes,
+        warm water (about 85&deg;), zero-depth entry, jump board, in-water wheelchair.</p>
+      <div class="frame"><iframe src="https://www.poolrelay.com/embed/C0jPpzgwHoJQbrvLZqCiSr" height="760" title="Margarita Rec Center pool, by lane" loading="lazy"></iframe></div>
+    </section>
+    <section id="pool-crc" data-panel="crc" hidden>
+      <p style="margin:0 0 10px"><b>Ronald J. Parks Community Rec Center</b> &middot; 30875 Rancho Vista Rd. &middot; 25 yards,
+        6 lanes, heated to about 80&deg;, slide, splash pad; diving board closed for repairs.</p>
+      <div class="frame"><iframe src="https://www.poolrelay.com/embed/yfBXMVlHDhKuwQzt7mJaax" height="640" title="Community Rec Center pool, by lane" loading="lazy"></iframe></div>
+    </section>
+
+    <h2 id="programs">Programs</h2>
+    <div class="programs">
+      <div class="program"><h3><span class="k k-lap"></span>Lap &amp; Gentle Swim</h3><p>Drop-in. $1 Temecula residents, $5 non-residents. Lap swim 12 and up; Gentle Swim 18 and up, in the warm water.</p></div>
+      <div class="program"><h3><span class="k k-fit"></span>Water fitness</h3><p>Water Walking, Adaptive Water Exercise, Aqua Fit, Deep and Shallow Water Aerobics. Pre-registration required.</p></div>
+      <div class="program"><h3><span class="k k-learn"></span>Swim lessons</h3><p>Parent &amp; Me from 6 months, toddler, Levels 1&ndash;3, teen, adult and private lessons. Pre-registration required.</p></div>
+      <div class="program"><h3><span class="k k-learn"></span>Masters</h3><p>Speed &amp; Endurance (Mon/Wed/Fri) and Skill &amp; Technique (Tue/Thu/Sat), $30 a month, at the Community Rec Center.</p></div>
+      <div class="program"><h3><span class="k k-rec"></span>Public swim &amp; Family Night</h3><p>Summer season. No fall public swim is posted at either pool.</p></div>
+    </div>
+
+    <div class="replaces">
+      <h2>What this replaces</h2>
+      <ul>
+        <li><strong>&ldquo;Disregard the schedules below.&rdquo;</strong> The Lap Swim page opens with an announcement
+          of a temporary CRC closure, a separate schedule for the Margarita pool, and an instruction to ignore the rest
+          of the page. It gives no date the closure started and none for reopening.</li>
+        <li><strong>The flyer and the page disagree.</strong> The Fall 2026 flyer has Gentle Swim at 5:30&ndash;9:15&nbsp;a.m.
+          from October&nbsp;5; the page has 6:15&ndash;9:15. The flyer has lap swim starting at 6:00 and later 6:30; the
+          page has 6:30 from August&nbsp;13.</li>
+        <li><strong>Classes for sale at a closed pool.</strong> The registration catalog still lists November Masters,
+          Aqua Fit, Deep Water and Shallow Water Aerobics, and two lifeguard courses, at the Community Rec Center.</li>
+        <li><strong>Times live somewhere else.</strong> The Water Exercise page names nine classes and gives no times or
+          pool for any of them; those are only in the registration catalog.</li>
+        <li><strong>Two answers for Family Night.</strong> The Public Swim page runs Monday Family Night at Margarita
+          &ldquo;thru Sep&nbsp;14&rdquo;; the Family Night page runs it to October&nbsp;12.</li>
+        <li><strong>One schedule instead.</strong> Each program is entered once. This page, both pool calendars and
+          the &ldquo;now&rdquo; board update together, and the closure ends on its own date the day it's known.</li>
+      </ul>
+    </div>
+  </main>
+
+  <aside class="contact">
+    <h3>Contact Us</h3>
+    <h4>Aquatics</h4>
+    <p>Swim@TemeculaCA.gov<br>951-308-6396</p>
+    <h4>Physical Address</h4>
+    <p>30875 Rancho Vista Road<br>Temecula, CA 92592</p>
+    <h4>Hours</h4>
+    <p>Monday&ndash;Friday<br>9:00 a.m.&ndash;5:00 p.m.<br>Closed on holidays.</p>
+    <h4>Admission</h4>
+    <p>$1 Temecula residents<br>$5 non-residents<br>Babies 6 months and up pay admission.</p>
+  </aside>
+</div></div>
+
+<footer class="site"><div class="in">
+  Unofficial preview built to demonstrate embedded <a href="https://www.poolrelay.com" target="_blank" rel="noopener">Pool Relay</a>
+  schedules. Not operated by or affiliated with the City of Temecula. Schedules and facts read from
+  <a href="https://temeculaca.gov/327/Aquatics" target="_blank" rel="noopener">temeculaca.gov</a> and the city's class
+  catalog on October 21, 2026. For official hours, see the city's site.
+</div></footer>
+
+<script>
+window.POOLS = [
+  { slug: "mrc", name: "Margarita Rec Center", area: "Temecula", kind: "yearRound", address: "29119 Margarita Rd., Temecula, CA 92591",
+    lat: 33.5136, lng: -117.1163, photo: null, facility: "Margarita Recreation Center", href: "#pool-mrc" },
+  { slug: "crc", name: "Community Rec Center", area: "Temecula", kind: "yearRound", address: "30875 Rancho Vista Rd., Temecula, CA 92592",
+    lat: 33.5032, lng: -117.1236, photo: null, facility: "Ronald J. Parks Community Recreation Center", href: "#pool-crc" },
+];
+// The pool tabs under "The two pools".
+document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => {
+  document.querySelectorAll(".tabs button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  document.querySelectorAll("[data-panel]").forEach((p) => { p.hidden = p.dataset.panel !== b.dataset.pool; });
+}));
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="finder.js"></script>
+</body>
+</html>
